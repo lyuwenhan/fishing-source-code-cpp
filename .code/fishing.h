@@ -14,7 +14,6 @@ using std::cout;
 using std::setw;
 using std::min;
 using std::max;
-#include"error.h"
 #include"variate.h"
 #include"function.h"
 #include"saving.h"

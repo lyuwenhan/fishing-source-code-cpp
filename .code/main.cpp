@@ -9,7 +9,6 @@
 #include"checkpoint.h"
 #include"function.h"
 #include"story.h"
-#include"error.h"
 #include"spin.h"
 #include"parkour.h"
 #include"beat.h"
