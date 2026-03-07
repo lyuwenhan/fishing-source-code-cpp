@@ -175,5 +175,17 @@
 #define sp_15 "Better luck next time!"
 #define to_1 "This is not the right place"
 #define to_2 "Please press enter to exit"
+#define sh_main1 "1. Upgrade Hook Speed, 2. Upgrade Fishing Profit, 3. Hook-off Probability, 4. Buy Cleaning Agent, 5. Upgrade Cleaning Agent, 6. Upgrade Aquarium Capacity, 7. Buy Oven, 8. Return."
+#define sh_mlr "    Max Level Reached"
+#define sh_cost "    Cost: $"
+#define sh_curgold ", Current Gold: $"
+#define sh_hook "Hook Speed: "
+#define sh_hook1 "    Current Avg Time: "
+#define sh_hook2 ", After Upgrade: "
+#define sh_get "Fishing Profit: "
+#define sh_get1 "    Current Avg Profit: "
+#define sh_get2 ", After Upgrade: "
+#define sh_hoff "Hook-off Probability: "
+
 #define fi_cntm 2
 #endif

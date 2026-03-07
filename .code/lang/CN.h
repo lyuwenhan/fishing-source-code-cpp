@@ -175,5 +175,17 @@
 #define sp_15 "谢谢惠顾"
 #define to_1 "这里不是你该来的地方"
 #define to_2 "请按下回车以退出"
+#define sh_main1 "1.升级上钩速度, 2.升级钓鱼收益, 3.脱钩概率, 4.购买清洁剂, 5.升级清洁剂, 6.升级水族馆容量, 7.购买烤箱, 8.返回。"
+#define sh_mlr "    等级已满"
+#define sh_cost "    升级花费: $"
+#define sh_curgold ", 当前金币数量: $"
+#define sh_hook "上钩速度: "
+#define sh_hook1 "    当前平均时间: "
+#define sh_hook2 ", 升级后平均时间: "
+#define sh_get "钓鱼收益: "
+#define sh_get1 "    当前平均收益: "
+#define sh_get2 ", 升级后平均收益: "
+#define sh_hoff "脱钩概率: "
+
 #define fi_cntm 1
 #endif

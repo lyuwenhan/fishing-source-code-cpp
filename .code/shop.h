@@ -13,59 +13,24 @@ namespace shop{
 			variate::data_saver.aqcnt = 30;
 		}
 		clear();
-		#ifdef EN
-		print("1. Upgrade Hook Speed, 2. Upgrade Fishing Profit, 3. Hook-off Probability, 4. Buy Cleaning Agent, 5. Upgrade Cleaning Agent, 6. Upgrade Aquarium Capacity, 7. Buy Oven, 8. Return.");
-		print("Hook Speed: ");
-		#else
-		print("1.升级上钩速度, 2.升级钓鱼收益, 3.脱钩概率, 4.购买清洁剂, 5.升级清洁剂, 6.升级水族馆容量, 7.购买烤箱, 8.返回。");
-		print("上钩速度: ");
-		#endif
+		print(sh_main1);
+		print(sh_hook);
 		if(variate::data_saver.level == variate::max_level){
-			#ifdef EN
-			print("    Max Level Reached");
-			#else
-			print("    等级已满");
-			#endif
+			print(sh_mlr);
 		}else{
-			#ifdef EN
-			print("    Current Avg Time: " + to_string((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) >> 1) + (((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) & 1) ? ".5" : "") + ", After Upgrade: " + to_string((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) >> 1) + (((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) & 1) ? ".5" : ""));
-			print("    Cost: $" + to_string(variate::cost[variate::data_saver.level + 1]) + ", Current Gold: $" + to_string(variate::data_saver.money));
-			#else
-			print("    当前平均时间: " + to_string((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) >> 1) + (((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) & 1) ? ".5" : "") + ", 升级后平均时间: " + to_string((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) >> 1) + (((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) & 1) ? ".5" : ""));
-			print("    升级花费: $" + to_string(variate::cost[variate::data_saver.level + 1]) + ", 当前金币数量: $" + to_string(variate::data_saver.money));
-			#endif
+			print(sh_hook1 + to_string((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) >> 1) + (((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) & 1) ? ".5" : "") + sh_hook2 + to_string((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) >> 1) + (((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) & 1) ? ".5" : ""));
+			print(sh_cost + to_string(variate::cost[variate::data_saver.level + 1]) + sh_curgold + to_string(variate::data_saver.money));
 		}
-		#ifdef EN
-		print("Fishing Profit: ");
-		#else
-		print("钓鱼收益: ");
-		#endif
+		print(sh_get);
 		if(variate::data_saver.get_level == variate::max_level2){
-			#ifdef EN
-			print("    Max Level Reached");
-			#else
-			print("    等级已满");
-			#endif
+			print(sh_mlr);
 		}else{
-			#ifdef EN
-			print("    Current Avg Profit: " + to_string((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) >> 1) + (((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) & 1) ? ".5" : "") + ", After Upgrade: " + to_string((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) >> 1) + (((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) & 1) ? ".5" : ""));
-			print("    Cost: $" + to_string(variate::cost2[variate::data_saver.get_level + 1]) + ", Current Gold: $" + to_string(variate::data_saver.money));
-			#else
-			print("    当前平均收益: " + to_string((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) >> 1) + (((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) & 1) ? ".5" : "") + ", 升级后平均收益: " + to_string((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) >> 1) + (((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) & 1) ? ".5" : ""));
-			print("    升级花费: $" + to_string(variate::cost2[variate::data_saver.get_level + 1]) + ", 当前金币数量: $" + to_string(variate::data_saver.money));
-			#endif
+			print(sh_get1 + to_string((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) >> 1) + (((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) & 1) ? ".5" : "") + sh_get2 + to_string((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) >> 1) + (((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) & 1) ? ".5" : ""));
+			print(sh_cost + to_string(variate::cost2[variate::data_saver.get_level + 1]) + sh_curgold + to_string(variate::data_saver.money));
 		}
-		#ifdef EN
-		print("Hook-off Probability: ");
-		#else
-		print("脱钩概率: ");
-		#endif
+		print(sh_hoff);
 		if(variate::data_saver.slip == 0){
-			#ifdef EN
-			print("    Max Level Reached");
-			#else
-			print("    等级已满");
-			#endif
+			print(sh_mlr);
 		}else{
 			if(variate::data_saver.slip > 10){
 				variate::data_saver.slip /= 10;
@@ -115,11 +80,7 @@ namespace shop{
 		print("清洁效率: ");
 		#endif
 		if(variate::data_saver.cleaning_sub >= 10){
-			#ifdef EN
-			print("    Max Level Reached");
-			#else
-			print("    等级已满");
-			#endif
+			print(sh_mlr);
 		}else{
 			#ifdef EN
 			print("    Current: Reduce " + to_string(variate::data_saver.cleaning_sub) + " levels per use, After Upgrade: Reduce " + to_string(variate::data_saver.cleaning_sub + 1) + " levels per use");
@@ -135,18 +96,14 @@ namespace shop{
 		print("水族馆容量: ");
 		#endif
 		if(variate::data_saver.aqcnt >= 30){
-			#ifdef EN
-			print("    Max Level Reached");
-			#else
-			print("    等级已满");
-			#endif
+			print(sh_mlr);
 		}else{
 			#ifdef EN
 			print("    Current Capacity: " + to_string(variate::data_saver.aqcnt) + ", After Upgrade: " + to_string(variate::data_saver.aqcnt + 2) + "");
-			print("    Cost: $" + to_string((variate::data_saver.aqcnt + 2) * 100) + ", Current Gold: $" + to_string(variate::data_saver.money));
+			print(sh_cost + to_string((variate::data_saver.aqcnt + 2) * 100) + sh_curgold + to_string(variate::data_saver.money));
 			#else
 			print("    当前水族馆容量: " + to_string(variate::data_saver.aqcnt) + "只, 升级后水族馆容量: " + to_string(variate::data_saver.aqcnt + 2) + "只");
-			print("    购买花费: $" + to_string((variate::data_saver.aqcnt + 2) * 100) + ", 当前金币数量: $" + to_string(variate::data_saver.money));
+			print("    购买花费: $" + to_string((variate::data_saver.aqcnt + 2) * 100) + sh_curgold + to_string(variate::data_saver.money));
 			#endif
 		}
 		#ifdef EN
@@ -419,18 +376,14 @@ namespace shop{
 			cout << "上钩速度: " << endl;
 			#endif
 			if(variate::data_saver.level == variate::max_level){
-				#ifdef EN
-				cout << "    Max Level Reached" << endl;
-				#else
-				cout << "    等级已满" << endl;
-				#endif
+				cout << sh_mlr << endl;
 			}else{
 				#ifdef EN
 				cout << "    Current Avg Time: " << to_string((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) >> 1) << (((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) & 1) ? ".5" : "") << ", After Upgrade: " << to_string((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) >> 1) << (((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) & 1) ? ".5" : "") << endl;
-				cout << "    Cost: $" << to_string(variate::cost[variate::data_saver.level + 1]) << ", Current Gold: $" << to_string(variate::data_saver.money) << endl;
+				cout << sh_cost << to_string(variate::cost[variate::data_saver.level + 1]) << sh_curgold << to_string(variate::data_saver.money) << endl;
 				#else
 				cout << "    当前平均时间: " << to_string((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) >> 1) << (((variate::mintime[variate::data_saver.level] + variate::maxtime[variate::data_saver.level]) & 1) ? ".5" : "") << ", 升级后平均时间: " << to_string((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) >> 1) << (((variate::mintime[variate::data_saver.level + 1] + variate::maxtime[variate::data_saver.level + 1]) & 1) ? ".5" : "") << endl;
-				cout << "    升级花费: $" << to_string(variate::cost[variate::data_saver.level + 1]) << ", 当前金币数量: $" << to_string(variate::data_saver.money) << endl;
+				cout << sh_cost << to_string(variate::cost[variate::data_saver.level + 1]) << sh_curgold << to_string(variate::data_saver.money) << endl;
 				#endif
 			}
 			#ifdef EN
@@ -439,18 +392,14 @@ namespace shop{
 			cout << "钓鱼收益: " << endl;
 			#endif
 			if(variate::data_saver.get_level == variate::max_level2){
-				#ifdef EN
-				cout << "    Max Level Reached" << endl;
-				#else
-				cout << "    等级已满" << endl;
-				#endif
+				cout << sh_mlr << endl;
 			}else{
 				#ifdef EN
 				cout << "    Current Avg Profit: " << to_string((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) >> 1) << (((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) & 1) ? ".5" : "") << ", After Upgrade: " << to_string((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) >> 1) << (((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) & 1) ? ".5" : "") << endl;
-				cout << "    Cost: $" << to_string(variate::cost2[variate::data_saver.get_level + 1]) << ", Current Gold: $" << to_string(variate::data_saver.money) << endl;
+				cout << sh_cost << to_string(variate::cost2[variate::data_saver.get_level + 1]) << sh_curgold << to_string(variate::data_saver.money) << endl;
 				#else
 				cout << "    当前平均收益: " << to_string((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) >> 1) << (((variate::minget[variate::data_saver.get_level] + variate::maxget[variate::data_saver.get_level]) & 1) ? ".5" : "") << ", 升级后平均收益: " << to_string((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) >> 1) << (((variate::minget[variate::data_saver.get_level + 1] + variate::maxget[variate::data_saver.get_level + 1]) & 1) ? ".5" : "") << endl;
-				cout << "    升级花费: $" << to_string(variate::cost2[variate::data_saver.get_level + 1]) << ", 当前金币数量: $" << to_string(variate::data_saver.money) << endl;
+				cout << sh_cost << to_string(variate::cost2[variate::data_saver.get_level + 1]) << sh_curgold << to_string(variate::data_saver.money) << endl;
 				#endif
 			}
 			#ifdef EN
@@ -459,11 +408,7 @@ namespace shop{
 			cout << "脱钩概率: " << endl;
 			#endif
 			if(variate::data_saver.slip == 0){
-				#ifdef EN
-				cout << "    Max Level Reached" << endl;
-				#else
-				cout << "    等级已满" << endl;
-				#endif
+				cout << sh_mlr << endl;
 			}else{
 				if(variate::data_saver.slip > 10){
 					variate::data_saver.slip /= 10;
@@ -513,11 +458,7 @@ namespace shop{
 			cout << "清洁效率: " << endl;
 			#endif
 			if(variate::data_saver.cleaning_sub >= 10){
-				#ifdef EN
-				cout << "    Max Level Reached" << endl;
-				#else
-				cout << "    等级已满" << endl;
-				#endif
+				cout << sh_mlr << endl;
 			}else{
 				#ifdef EN
 				cout << "    Current: Reduce " << to_string(variate::data_saver.cleaning_sub) << " levels per use, After Upgrade: Reduce " << to_string(variate::data_saver.cleaning_sub + 1) << " levels per use" << endl;
@@ -533,18 +474,14 @@ namespace shop{
 			cout << "水族馆容量: " << endl;
 			#endif
 			if(variate::data_saver.aqcnt >= 30){
-				#ifdef EN
-				cout << "    Max Level Reached" << endl;
-				#else
-				cout << "    等级已满" << endl;
-				#endif
+				cout << sh_mlr << endl;
 			}else{
 				#ifdef EN
 				cout << "    Current Capacity: " << to_string(variate::data_saver.aqcnt) << ", After Upgrade: " << to_string(variate::data_saver.aqcnt + 2) << "" << endl;
-				cout << "    Cost: $" << to_string((variate::data_saver.aqcnt + 2) * 100) << ", Current Gold: $" << to_string(variate::data_saver.money) << endl;
+				cout << sh_cost << to_string((variate::data_saver.aqcnt + 2) * 100) << sh_curgold << to_string(variate::data_saver.money) << endl;
 				#else
 				cout << "    当前水族馆容量: " << to_string(variate::data_saver.aqcnt) << "只, 升级后水族馆容量: " << to_string(variate::data_saver.aqcnt + 2) << "只" << endl;
-				cout << "    购买花费: $" << to_string((variate::data_saver.aqcnt + 2) * 100) << ", 当前金币数量: $" << to_string(variate::data_saver.money) << endl;
+				cout << "    购买花费: $" << to_string((variate::data_saver.aqcnt + 2) * 100) << sh_curgold << to_string(variate::data_saver.money) << endl;
 				#endif
 			}
 			#ifdef EN
@@ -601,9 +538,9 @@ namespace shop{
 		#endif
 		if(variate::data_saver.stime >= 10){
 			#ifdef EN
-			print("    Max Level Reached");
+			print(sh_mlr);
 			#else
-			print("    等级已满");
+			print(sh_mlr);
 			#endif
 		}else{
 			#ifdef EN
@@ -621,9 +558,9 @@ namespace shop{
 		#endif
 		if(variate::data_saver.bf >= 60){
 			#ifdef EN
-			print("    Max Level Reached");
+			print(sh_mlr);
 			#else
-			print("    等级已满");
+			print(sh_mlr);
 			#endif
 		}else{
 			#ifdef EN
@@ -700,9 +637,9 @@ namespace shop{
 			#endif
 			if(variate::data_saver.stime >= 10){
 				#ifdef EN
-				cout << "    Max Level Reached" << endl;
+				cout << sh_mlr << endl;
 				#else
-				cout << "    等级已满" << endl;
+				cout << sh_mlr << endl;
 				#endif
 			}else{
 				#ifdef EN
@@ -720,9 +657,9 @@ namespace shop{
 			#endif
 			if(variate::data_saver.bf >= 60){
 				#ifdef EN
-				cout << "    Max Level Reached" << endl;
+				cout << sh_mlr << endl;
 				#else
-				cout << "    等级已满" << endl;
+				cout << sh_mlr << endl;
 				#endif
 			}else{
 				#ifdef EN
