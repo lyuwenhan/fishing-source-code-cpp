@@ -25,7 +25,7 @@ fi
 
 if $build_zh; then
 	echo -e "    [ZH] Compiling..."
-	err1=$(g++ -fdiagnostics-color=always .code/main.cpp -o main.run -O2 2>&1)
+	err1=$(g++ -fdiagnostics-color=always code/main.cpp -o main.run -O2 2>&1)
 	zh_suc=$?
     if [[ $zh_suc -ne 0 ]]; then
         echo -e "    [ZH] Compilation failed"
@@ -37,7 +37,7 @@ fi
 
 if $build_en ; then
 	echo -e "    [EN] Compiling..."
-	err2=$(g++ -fdiagnostics-color=always .code/main.cpp -o mainEN.run -DEN -O2 2>&1)
+	err2=$(g++ -fdiagnostics-color=always code/main.cpp -o mainEN.run -DEN -O2 2>&1)
 	en_suc=$?
     if [[ $en_suc -ne 0 ]]; then
         echo -e "    [EN] Compilation failed"
