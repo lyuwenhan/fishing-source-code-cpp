@@ -16,7 +16,7 @@
 #define chp_yesuser "用户已存在"
 #define chp_regigood "注册成功"
 #define chp_main "1.登录, 2.注册, 3.退出"
-#define fi_wea {"雨    ", "雪    ", "晴      ", "阴      ", "多云    ", "雾      "}
+#define fi_wea {"雨  ", "雪  ", "晴    ", "阴    ", "多云  ", "雾    "}
 #define fi_big {"", "小", "中", "大"}
 #define fi_type {"腐烂的", "普通的", "紫水晶", "青金石", "金", "绿宝石", "钻石"}
 #define fi_got "你钓到了一条"
