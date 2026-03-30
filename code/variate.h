@@ -20,7 +20,6 @@ namespace variate{
 	bool fish_man = false;
 	int big = 0;
 	int diamond = 0;
-	const int tools = 4;
 	int aqnow = 0;
 	int aqother = 0;
 	string pwd;
