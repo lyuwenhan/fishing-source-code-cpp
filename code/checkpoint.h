@@ -22,9 +22,6 @@ using std::to_string;
 #include"function.h"
 #include"parkour.h"
 namespace checkpoint{
-	bool auto_save_type = false;
-	int timestamp = 0;
-	string save_name;
 	inline bool check_name(const std::string& name) {
 		for (char c : name) {
 			if (!std::isalnum(c) && c != '_' && c != '-') {
