@@ -187,7 +187,6 @@ namespace checkpoint{
 		}
 	}
 	inline bool chp(){
-		string name;
 		while(true){
 			clear();
 			print(chp_main);
